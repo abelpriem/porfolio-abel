@@ -4,13 +4,23 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 
 import { icons } from "../icons/icons.astro";
-const { LinkedinIcon, GithubIcon, EmailIcon, BriefcaseIcon, CodeIcon } = icons;
+const {
+  LinkedinIcon,
+  GithubIcon,
+  EmailIcon,
+  BriefcaseIcon,
+  CodeIcon,
+  UserIcon,
+  CVIcon,
+} = icons;
 
 import SocialPhil from "../components/SocialPhil.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import SectionProjects from "../components/SectionProjects.astro";
 import { GeneratedIdentifierFlags } from "typescript";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout
@@ -35,8 +45,8 @@ import Projects from "../components/Projects.astro";
       <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
         <span>+2 años de experiencia.</span><span class="text-yellow-200/90"
           >Desarrollador Web Full-Stack.</span
-        ><span class="text-red-200/90">
-          Residiendo en Gijón, Asturias (España).</span
+        ><span class="opacity-75"> Residiendo en </span><span
+          class="text-red-200/90">Gijón, Asturias (España).</span
         ><span class="opacity-75"
           >Especializado en el Stack MERN y apasionado del backend, actualmente
           trabajando con nuevas tecnologías como Astro o NextJs</span
@@ -64,6 +74,13 @@ import Projects from "../components/Projects.astro";
           <EmailIcon class="size-4 md:size-6" />
           abelpriem94@hotmail.com
         </SocialPhil>
+
+        <SocialPhil
+          href="https://drive.google.com/file/d/1TRf7HRM7pM7FNBMQJoClNChsJ2VRhRDU/view?usp=sharing"
+        >
+          <CVIcon class="size-4 md:size-6" />
+          CV
+        </SocialPhil>
       </nav>
     </SectionContainer>
 
@@ -74,11 +91,18 @@ import Projects from "../components/Projects.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
+    <SectionProjects id="proyectos" class="mb-12">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
         <CodeIcon class="size-8" />Proyectos
       </h2>
       <Projects />
+    </SectionProjects>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <UserIcon class="size-8" />Sobre mi
+      </h2>
+      <About />
     </SectionContainer>
   </main></Layout
 >
