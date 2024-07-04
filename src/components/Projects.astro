@@ -1,0 +1,122 @@
+---
+import { icons } from "../icons/icons.astro";
+const {
+  GithubIcon,
+  CloudIcon,
+  AWSIcon,
+  React,
+  NodeJS,
+  Express,
+  MongoDB,
+  JavaScript,
+} = icons;
+import SocialPhil from "./SocialPhil.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-black text-white",
+    icon: NodeJS,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-black text-white",
+    icon: Express,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-black text-white",
+    icon: MongoDB,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-black text-white",
+    icon: AWSIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: JavaScript,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Hiinit-Web v1.0",
+    description:
+      "HiInit Web es un sistema de terminal web de creación y carga de archivos con un sistema de registro y login de usuarios con diferentes grupos y categorías. Los archivos pueden ser compartidos entre los distintos miembros de un grupo específico, navegando entre los distintos archivos de la carpeta raíz. Hay diferentes roles con sus correspondientes permisos pero solo el tipo de usuario ADMIN tiene el sistema CRUD (creación, escritura, carga y eliminación).",
+    link: "https://main--hiinit-web-terminal.netlify.app/",
+    github: "https://github.com/abelpriem/HiInit-Web-Terminal.git",
+    image: "/projects/hiinit.webp",
+    tags: [TAGS.REACT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB, TAGS.AWS],
+  },
+  {
+    title: "API Rest -  BLOG",
+    description:
+      "Esta es una API Rest completa y totalmente funcional para implementar en un sitio web de blogs con CRUD. Es capaz de crear artículos asociándoles imágenes a través de un sistema de carga de archivos así como la posibilidad de listarlos a través de un buscador.",
+    link: "",
+    github: "https://github.com/abelpriem/API-Rest-Blog.git",
+    image: "/projects/apiblog.webp",
+    tags: [TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB],
+  },
+  {
+    title: "API Rest -  SOCIAL MEDIA",
+    description:
+      "Esta es una API Rest completa y totalmente funcional para implementar en un sitio web de redes sociales con CRUD. Es capaz de crear diferentes usuarios con sus propias publicaciones o posts con la posibilidad de seguir a diferentes usuarios, subir sus avatares y descargarlos también.",
+    link: "",
+    github: "https://github.com/abelpriem/API-SOCIAL-MEDIA.git",
+    image: "/projects/socialmedia.webp",
+    tags: [TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image, link, github }) => (
+    <article class="p-4 mb-4">
+      <h3 class="2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <span class="flex gap-x-2 mb-2">
+        {link && (
+          <p>
+            <SocialPhil href={link} target="_blank" rel="noopener">
+              <CloudIcon class="size-4 md:size-6 hoover:red" />
+              Netlify
+            </SocialPhil>
+          </p>
+        )}
+        {github && (
+          <p>
+            <SocialPhil href={github} target="_blank" rel="noopener">
+              <GithubIcon class="size-4 md:size-6" />
+              Check on GitHub
+            </SocialPhil>
+          </p>
+        )}
+      </span>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex items-center gap-x-2 rounded-full text-xs py-2 px-1${tag.class}`}
+            >
+              <tag.icon class="size-8 bacground-" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p class="text-lg mb-4 tex-pretty">{description}</p>
+
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+    </article>
+  ))
+}

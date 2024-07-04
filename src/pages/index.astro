@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+
+import { icons } from "../icons/icons.astro";
+const { LinkedinIcon, GithubIcon, EmailIcon, BriefcaseIcon, CodeIcon } = icons;
+
+import SocialPhil from "../components/SocialPhil.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import { GeneratedIdentifierFlags } from "typescript";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Porfolio de Abel - Jr. Full-Stack Developer"
+  description="Desarrollador Web Junior tras un cambio de sector. Especialista en crear aplicaciones únicas"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex
+				 flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey! Soy Abel Prieto 👋<a
+          href="https://linkedin.com/in/abelprietomartin"
+          rel="noopener"
+          target="_blank"
+          class="flex justify-center items-center"
+        >
+          <Badge>Open to work!</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        <span>+2 años de experiencia.</span><span class="text-yellow-200/90"
+          >Desarrollador Web Full-Stack.</span
+        ><span class="text-red-200/90">
+          Residiendo en Gijón, Asturias (España).</span
+        ><span class="opacity-75"
+          >Especializado en el Stack MERN y apasionado del backend, actualmente
+          trabajando con nuevas tecnologías como Astro o NextJs</span
+        >
+      </h2>
+
+      <img
+        class="py-4"
+        src="https://skillicons.dev/icons?i=html,css,js,react,sass,tailwind,vite,nodejs,express,mongodb,jest,astro"
+        alt="tools-icons"
+      />
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPhil href="http://www.linkedin.com/in/abelprietomartin">
+          <LinkedinIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPhil>
+
+        <SocialPhil href="http://www.github.com/abelpriem">
+          <GithubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPhil>
+
+        <SocialPhil href="mailto:abelpriem94@hotmail.com">
+          <EmailIcon class="size-4 md:size-6" />
+          abelpriem94@hotmail.com
+        </SocialPhil>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <BriefcaseIcon class="size-8" />Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <CodeIcon class="size-8" />Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main></Layout
+>
