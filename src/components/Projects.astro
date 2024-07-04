@@ -9,6 +9,8 @@ const {
   Express,
   MongoDB,
   JavaScript,
+  AstroIcon,
+  TailwindIcon,
 } = icons;
 import SocialPhil from "./SocialPhil.astro";
 
@@ -43,6 +45,16 @@ const TAGS = {
     class: "bg-black text-white",
     icon: JavaScript,
   },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-black text-white",
+    icon: TailwindIcon,
+  },
 };
 
 const PROJECTS = [
@@ -54,6 +66,15 @@ const PROJECTS = [
     github: "https://github.com/abelpriem/HiInit-Web-Terminal.git",
     image: "/projects/hiinit.webp",
     tags: [TAGS.REACT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB, TAGS.AWS],
+  },
+  {
+    title: "Portfolio",
+    description:
+      "Utilización e implementación de nuevas tecnologías como Astro para la creación de este mismo porfolio y usando Tailwind para la estilización de todos y cada uno de los componentes.",
+    link: "",
+    github: "https://github.com/abelpriem/portfolio-abel.git",
+    image: "/projects/portfolio.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
   {
     title: "API Rest -  BLOG",
