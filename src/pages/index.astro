@@ -1,8 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Badge from "../components/Badge.astro";
-
 import { icons } from "../icons/icons.astro";
 const {
   LinkedinIcon,
@@ -17,7 +14,7 @@ const {
 import SocialPhil from "../components/SocialPhil.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionProjects from "../components/SectionProjects.astro";
-import { GeneratedIdentifierFlags } from "typescript";
+import Description from "../components/Description.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 import About from "../components/About.astro";
@@ -29,28 +26,7 @@ import About from "../components/About.astro";
 >
   <main class="px-4">
     <SectionContainer class="py-44 pb-24">
-      <h1
-        class="text-3xl md:text-4xl lg:text-5xl font-bold flex
-				 flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        Hey! Soy Abel Prieto 👋<a
-          href="https://linkedin.com/in/abelprietomartin"
-          rel="noopener"
-          target="_blank"
-          class="flex justify-center items-center"
-        >
-          <Badge>Open to work!</Badge>
-        </a>
-      </h1>
-      <h2
-        class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px] [&>strong]:text-yellow-200"
-      >
-        +1 año de experiencia. <strong>Desarrollador Web Full-Stack.</strong> Viviendo
-        en <span class="text-red-200/90 dark:text-blue-500"
-          >Gijón, Asturias (España)</span
-        >. Especializado en el Stack MERN y apasionado del backend, actualmente
-        trabajando en nuevos proyectos y con nuevas tecnologías
-      </h2>
+      <Description />
 
       <img
         class="py-4"

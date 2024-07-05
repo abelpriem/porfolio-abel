@@ -100,7 +100,9 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, tags, image, link, github }) => (
     <article class="p-4 mb-4">
-      <h3 class="2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <h3 class="2xl font-semibold underline text-yellow-600 dark:text-yellow-200 mb-2">
+        {title}
+      </h3>
       <span class="flex gap-x-2 mb-2">
         {link && (
           <p>
@@ -123,7 +125,7 @@ const PROJECTS = [
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex items-center gap-x-2 rounded-full text-xs py-2 px-1 dark:bg-transparent dark:text-white bg-gray-[#1e252e]  text-white`}
+              class={`flex items-center gap-x-2 rounded-full text-xs py-2 px-1 bg-gray-500 dark:bg-transparent dark:text-white bg-gray-[#1e252e]  text-white`}
             >
               <tag.icon class="size-8" />
               {tag.name}
