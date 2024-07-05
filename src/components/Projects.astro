@@ -72,7 +72,7 @@ const PROJECTS = [
     description:
       "Utilización e implementación de nuevas tecnologías como Astro para la creación y el desarrollo de este mismo porfolio y usando Tailwind para la estilización de todos y cada uno de los componentes.",
     link: "",
-    github: "https://github.com/abelpriem/portfolio-abel.git",
+    github: "https://github.com/abelpriem/porfolio-abel.git",
     image: "/projects/portfolio.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
@@ -105,7 +105,7 @@ const PROJECTS = [
         {link && (
           <p>
             <SocialPhil href={link} target="_blank" rel="noopener">
-              <CloudIcon class="size-4 md:size-6 hoover:red" />
+              <CloudIcon class="size-4 md:size-6 hoover:text-red" />
               Netlify
             </SocialPhil>
           </p>
@@ -123,9 +123,9 @@ const PROJECTS = [
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex items-center gap-x-2 rounded-full text-xs py-2 px-1${tag.class}`}
+              class={`flex items-center gap-x-2 rounded-full text-xs py-2 px-1 dark:bg-transparent dark:text-white bg-gray-[#1e252e]  text-white`}
             >
-              <tag.icon class="size-8 bacground-" />
+              <tag.icon class="size-8" />
               {tag.name}
             </span>
           </li>

@@ -1,3 +1,8 @@
+---
+import { icons } from "../icons/icons.astro";
+const { DarkIcon, LightIcon } = icons;
+---
+
 <header
   class="flex justify-between items-center py-5 w-full xl:w-[1120px] mx-auto"
 >
@@ -8,11 +13,14 @@
   />
 
   <nav class="flex flex-row gap-x-10 opacity-80">
-    <a href="#experiencia" class="hover:text-yellow-200/90">Experiencia</a>
-    <a href="#proyectos" class="hover:text-yellow-200/90">Proyectos</a>
-    <a href="#sobre-mi" class="hover:text-yellow-200/90">Sobre mi</a>
-    <a href="mailto:abelpriem94@hotmail.com" class="hover:text-yellow-200/90"
+    <a href="#experiencia" class="hover:text-yellow-200">Experiencia</a>
+    <a href="#proyectos" class="hover:text-yellow-200">Proyectos</a>
+    <a href="#sobre-mi" class="hover:text-yellow-200">Sobre mi</a>
+    <a href="mailto:abelpriem94@hotmail.com" class="hover:text-yellow-200"
       >Contacto</a
     >
+    <div id="themes-toggles" class="hover:scale-125 transition-all">
+      <DarkIcon />
+    </div>
   </nav>
 </header>

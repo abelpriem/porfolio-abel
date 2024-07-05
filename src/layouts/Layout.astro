@@ -23,12 +23,6 @@ const { title, description } = Astro.props;
   </head>
 
   <body>
-    <div class="relative h-full w-full bg-slate-950">
-      <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
-      >
-      </div>
-    </div>
     <Header />
     <slot />
     <Footer />
@@ -46,15 +40,23 @@ const { title, description } = Astro.props;
   }
 
   body {
-    background: #1e252e;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: white;
+    background-color: white;
   }
 
   @media (prefers-reduce-motion: redude) {
     html {
       scroll-behavior: auto;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #1e252e;
+      background-color: #1e252e;
     }
   }
 </style>

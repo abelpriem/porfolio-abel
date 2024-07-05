@@ -30,7 +30,7 @@ import About from "../components/About.astro";
   <main class="px-4">
     <SectionContainer class="py-44 pb-24">
       <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex
+        class="text-3xl md:text-4xl lg:text-5xl font-bold flex
 				 flex-row gap-x-4 pb-6 lg:pb-10"
       >
         Hey! Soy Abel Prieto 👋<a
@@ -42,15 +42,14 @@ import About from "../components/About.astro";
           <Badge>Open to work!</Badge>
         </a>
       </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        <span>+1 año de experiencia. </span><span class="text-yellow-200/90"
-          >Desarrollador Web Full-Stack.</span
-        ><span class="opacity-75"> Residiendo en </span><span
-          class="text-red-200/90">Gijón, Asturias (España).</span
-        ><span class="opacity-75">
-          Especializado en el Stack MERN y apasionado del backend, actualmente
-          trabajando con nuevas tecnologías como Astro o NextJs</span
-        >
+      <h2
+        class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px] [&>strong]:text-yellow-200"
+      >
+        +1 año de experiencia. <strong>Desarrollador Web Full-Stack.</strong> Viviendo
+        en <span class="text-red-200/90 dark:text-blue-500"
+          >Gijón, Asturias (España)</span
+        >. Especializado en el Stack MERN y apasionado del backend, actualmente
+        trabajando en nuevos proyectos y con nuevas tecnologías
       </h2>
 
       <img
