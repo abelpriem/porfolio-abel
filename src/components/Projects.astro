@@ -11,6 +11,8 @@ const {
   JavaScript,
   AstroIcon,
   TailwindIcon,
+  SqlIcon,
+  PugIcon,
 } = icons;
 import SocialPhil from "./SocialPhil.astro";
 
@@ -55,6 +57,16 @@ const TAGS = {
     class: "bg-black text-white",
     icon: TailwindIcon,
   },
+  PUG: {
+    name: "PUG",
+    class: "bg-blac text-white",
+    icon: PugIcon,
+  },
+  SQL: {
+    name: "SQL",
+    class: "bg-black text-white",
+    icon: SqlIcon,
+  },
 };
 
 const PROJECTS = [
@@ -66,6 +78,15 @@ const PROJECTS = [
     github: "https://github.com/abelpriem/HiInit-Web-Terminal.git",
     image: "/projects/hiinit.webp",
     tags: [TAGS.REACT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB, TAGS.AWS],
+  },
+  {
+    title: "IdealHouse",
+    description:
+      "La aplicación web IdealHouse es un portal de venta de inmuebles, clon o tipo Idealista, creado con el motor de plantillas PUG y Tailwind para la implementación de estilos. TIene autenticación de dos pasos vía email y portal de usuario, con el que poder navegar por las propiedades del usuario y recibir mensajes de otros clientes así como la parte genérica en donde poder listar y visualizar todas las propiedades y sus localizaciones.",
+    link: "https://idealhouse.onrender.com/",
+    github: "https://github.com/abelpriem/IdealHouse",
+    image: "/projects/IdealHouse.jpg",
+    tags: [TAGS.TAILWIND, TAGS.SQL, TAGS.NODEJS, TAGS.EXPRESS],
   },
   {
     title: "Portfolio",
@@ -108,7 +129,7 @@ const PROJECTS = [
           <p>
             <SocialPhil href={link} target="_blank" rel="noopener">
               <CloudIcon class="size-4 md:size-6 hoover:text-red" />
-              Netlify
+              Online
             </SocialPhil>
           </p>
         )}
@@ -116,7 +137,7 @@ const PROJECTS = [
           <p>
             <SocialPhil href={github} target="_blank" rel="noopener">
               <GithubIcon class="size-4 md:size-6" />
-              Check on GitHub
+              Link a GitHub
             </SocialPhil>
           </p>
         )}
@@ -138,7 +159,7 @@ const PROJECTS = [
       </p>
 
       <img
-        class="rounded shadow-2xl shadow-black/10 dark:shadow-white/10"
+        class="w-full rounded shadow-2xl shadow-black/10 dark:shadow-white/10"
         src={image}
         alt={`Captura de pantalla del proyecto ${title}`}
       />
