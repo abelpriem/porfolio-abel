@@ -1,5 +1,6 @@
 ---
 import { icons } from "../icons/icons.astro";
+import SocialPhil from "./SocialPhil.astro";
 const {
   GithubIcon,
   CloudIcon,
@@ -14,7 +15,6 @@ const {
   SqlIcon,
   PugIcon,
 } = icons;
-import SocialPhil from "./SocialPhil.astro";
 
 const TAGS = {
   REACT: {
@@ -87,6 +87,15 @@ const PROJECTS = [
     github: "https://github.com/abelpriem/IdealHouse",
     image: "/projects/IdealHouse.jpg",
     tags: [TAGS.TAILWIND, TAGS.SQL, TAGS.NODEJS, TAGS.EXPRESS],
+  },
+  {
+    title: "DevJobs",
+    description:
+      "DevJobs es un portal de empleo destinado para reclutadores en la que poder añadir vacantes y ofertas de trabajo, especializado en el sector tecnológico. En ella, los usuarios podrán visualizar los stacks, descripciones y salarios de las vacantes así como aplicar en ellas sus currículums. Por otro lado, los reclutadores logeados contarán con un panel de administración en el que poder realizar un CRUD completo así como listar las vacantes y el número de candidatos que han aplicado",
+    link: "https://devjobsweb.netlify.app/",
+    github: "https://github.com/abelpriem/devJobs",
+    image: "/projects/devjobs.webp",
+    tags: [TAGS.REACT, TAGS.MONGODB, TAGS.NODEJS, TAGS.EXPRESS, TAGS.TAILWIND],
   },
   {
     title: "Portfolio",
