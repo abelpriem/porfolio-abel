@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { icons } from "../icons/icons.astro";
+import Layout from "../layouts/Layout.astro";
 const {
   LinkedinIcon,
   GithubIcon,
@@ -11,26 +11,26 @@ const {
   CVIcon,
 } = icons;
 
-import SocialPhil from "../components/SocialPhil.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import SectionProjects from "../components/SectionProjects.astro";
+import About from "../components/About.astro";
 import Description from "../components/Description.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
-import About from "../components/About.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SectionProjects from "../components/SectionProjects.astro";
+import SocialPhil from "../components/SocialPhil.astro";
 ---
 
 <Layout
   title="Porfolio de Abel - Jr. Full-Stack Developer"
   description="Desarrollador Web Junior tras un cambio de sector. Especialista en crear aplicaciones únicas"
 >
-  <main class="px-4">
+  <main class="px-4 mx-auto">
     <SectionContainer class="py-44 pb-24">
       <Description />
 
       <img
         class="py-4"
-        src="https://skillicons.dev/icons?i=html,css,js,react,sass,tailwind,vite,nodejs,express,mongodb,mysql,jest,astro"
+        src="https://skillicons.dev/icons?i=html,css,js,java,react,astro,spring,sass,tailwind,vite,nodejs,express,mongodb,mysql,jest"
         alt="tools-icons"
       />
 
