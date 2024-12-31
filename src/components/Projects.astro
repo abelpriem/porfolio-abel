@@ -14,6 +14,11 @@ const {
   TailwindIcon,
   SqlIcon,
   PugIcon,
+  Spring,
+  Java,
+  Docker,
+  Postman,
+  JWT,
 } = icons;
 
 const TAGS = {
@@ -62,24 +67,48 @@ const TAGS = {
     class: "bg-blac text-white",
     icon: PugIcon,
   },
-  JAVA: {
-    name: "JAVA",
-    class: "bg-blac text-white",
-    icon: PugIcon,
-  },
-  SPRING: {
-    name: "SPRING",
-    class: "bg-blac text-white",
-    icon: PugIcon,
-  },
   SQL: {
     name: "SQL",
     class: "bg-black text-white",
     icon: SqlIcon,
   },
+  SPRING: {
+    name: "Spring",
+    class: "bg-black text-white",
+    icon: Spring,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-black text-white",
+    icon: Java,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-black text-white",
+    icon: Docker,
+  },
+  POSTMAN: {
+    name: "Postman",
+    class: "bg-black text-white",
+    icon: Postman,
+  },
+  JWT: {
+    name: "JWT",
+    class: "bg-black text-white",
+    icon: JWT,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "Backend E-Commerce Funko Shop",
+    description:
+      "Backend completo para una tienda online de coleccionables Funko, creado en colaboración por un equipo de 20 desarrolladores. Utilizamos Java 8, Spring Boot y MySQL para implementar una arquitectura escalable, con autenticación segura mediante JWT y Spring Security. El proyecto incluye un sistema de gestión de usuarios y roles (administradores y clientes), funcionalidades para el manejo de productos y pedidos, y está preparado para futuras integraciones como activación de cuentas por correo electrónico. Un proyecto diseñado para combinar seguridad, eficiencia y experiencia de usuario.",
+    link: "",
+    github: "https://github.com/abelpriem/FunkoShop-Backend.git",
+    image: "/projects/funko.webp",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.SQL, TAGS.JWT, TAGS.POSTMAN],
+  },
   {
     title: "Hiinit-Web v1.0",
     description:
