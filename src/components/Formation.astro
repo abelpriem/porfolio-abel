@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const FORMATION = [
+  {
+    date: "Septiembre 2024 - Diciembre 2024",
+    title: "Desarrollador Back-End en Factoría F5",
+    description:
+      "Implementación y desarrollo de soluciones back-end integrales empleando tecnologías como Java, Spring y SQL. Desde el diseño de arquitecturas eficientes y escalables hasta la gestión de contenedores con Docker, asegurando pruebas de API's exhaustivas y un riguroso testing con JUnit para garantizar una covertura total del código.",
+  },
+  {
+    date: "Marzo 2023 - Agosto 2024",
+    title: "Desarrollador Full-Stack en ISDI CODERS",
+    description:
+      "Desarrollo de aplicaciones web completas aplicando tecnologías como React, NodeJS o Express, desde el montaje de elaboradas lógicas y un riguroso testeo de APIs hasta la creación de interfaces de usuarios y componentes, siempre trabajando con buenas prácticas y metodologías ágiles.",
+    link: "https://open.spotify.com/episode/4M1JIvqHO9WF3HXysigDqs?si=a890104bcf2b4da2&nd=1&dlsi=38043a4ec9ce4720",
+  },
+];
+---
+
+<ol class="relative border-s border-black dark:border-gray-200 ml-4">
+  {
+    FORMATION.map((formation) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...formation} />
+      </li>
+    ))
+  }
+</ol>

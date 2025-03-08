@@ -9,11 +9,13 @@ const {
   CodeIcon,
   UserIcon,
   CVIcon,
+  NotebookIcon,
 } = icons;
 
 import About from "../components/About.astro";
 import Description from "../components/Description.astro";
 import Experience from "../components/Experience.astro";
+import Formation from "../components/Formation.astro";
 import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionProjects from "../components/SectionProjects.astro";
@@ -66,6 +68,15 @@ import SocialPhil from "../components/SocialPhil.astro";
         <BriefcaseIcon class="size-8" />Experiencia laboral
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="formacion">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-2 items-center text-black dark:text-white"
+      >
+        <NotebookIcon class="size-8" />Formación
+      </h2>
+      <Formation />
     </SectionContainer>
 
     <SectionProjects id="proyectos" class="mb-12">
